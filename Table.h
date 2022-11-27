@@ -6,15 +6,28 @@
 #define KURSACH_TABLE_H
 
 
-class Table {
+class Adv {
 private:
     char* name;//название
     char* date;//дата
     char* num;//номер
     int price;//цена
 public:
-
+    Adv();
+    Adv(char,char,char,int);
+    Adv(Adv&);
+    ~Adv();
 };
 
-
+class Table{
+private:
+    Adv obj;
+    int id;
+    Table* left, *right;
+public:
+    Table();
+    Table(Adv);
+    Table(Table&);
+    ~Table();
+};
 #endif //KURSACH_TABLE_H
