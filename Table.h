@@ -5,21 +5,10 @@
 #ifndef KURSACH_TABLE_H
 #define KURSACH_TABLE_H
 #include <cstring>
-
-class Adv {
-private:
-    char* name;//название
-    char* date;//дата
-    char* num;//номер
-    int price;//цена
-public:
-    Adv();
-    Adv(char*,char*,char*,int);
-    Adv(Adv&);
-    ~Adv();
-};
+#include "Adv.h"
 
 class Table{
+    friend class Adv;
 private:
     Adv obj;
     int id;
