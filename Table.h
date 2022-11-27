@@ -4,7 +4,7 @@
 
 #ifndef KURSACH_TABLE_H
 #define KURSACH_TABLE_H
-
+#include <cstring>
 
 class Adv {
 private:
@@ -14,7 +14,7 @@ private:
     int price;//цена
 public:
     Adv();
-    Adv(char,char,char,int);
+    Adv(char*,char*,char*,int);
     Adv(Adv&);
     ~Adv();
 };
@@ -29,5 +29,9 @@ public:
     Table(Adv);
     Table(Table&);
     ~Table();
+    void push(Table**,Adv);
+    void dell(Table**);
+    void sort();
+
 };
 #endif //KURSACH_TABLE_H
